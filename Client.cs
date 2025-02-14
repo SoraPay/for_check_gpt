@@ -99,49 +99,5 @@ namespace Seminar_4
 
         }
 
-        //public static async Task ClientAsync(string NickName)
-        //{
-        //    IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse(local), 12345);
-        //    UdpClient udpClient = new UdpClient();
-
-        //    Console.WriteLine("Welcome " + NickName);
-
-        //    while (true)
-        //    {
-        //        await Task.Run(async () =>
-        //        {
-        //            string? strEnter = Console.ReadLine();
-
-        //            Message? message = new Message(NickName, strEnter ?? "Null", DateTime.Now);
-        //            string strJson = message.SerializeJson();
-        //            byte[] bytes = Encoding.UTF8.GetBytes(strJson);
-
-        //            var countForCheck = udpClient.SendAsync(bytes, iPEndPoint);
-        //            Console.WriteLine("Server get SendAsync");
-
-        //            if (bytes.Length == countForCheck.Result)
-        //                Console.WriteLine($"Sending....");
-        //            else
-        //                Console.WriteLine("Error in message");
-
-        //            var obj = await udpClient.ReceiveAsync();
-        //            Console.WriteLine("Server get ReceiveAsync");
-
-        //            byte[] buffer = obj.Buffer;
-
-        //            string strFromByte = Encoding.UTF8.GetString(buffer);
-        //            var messageJson = Message.DeserializeJson(strFromByte);
-        //            Console.WriteLine(messageJson);
-
-
-        //        });
-        //        if (Console.ReadKey().Key == ConsoleKey.Escape)
-        //        {
-        //            Console.WriteLine("Good by");
-        //            break;
-        //        }
-        //    }
-
-        //}
     }
 }
