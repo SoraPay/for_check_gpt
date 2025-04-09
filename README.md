@@ -57,40 +57,25 @@
    git clone <repository-url>
    cd <repository-folder>
    ```
-Настройте переменные окружения: Создайте файл .env в корне проекта и добавьте следующие переменные:
-text
-
-Collapse
-
-Wrap
-
-Copy
-TELEGRAM_BOT_TOKEN=<ваш_токен_бота>
-TELEGRAM_LOG_CHAT_ID=<ID_чата_для_логов>
-MYSQL_CONNECTION_STRING=Server=db;Database=telegembot;User=botuser;Password=<ваш_пароль>;
-REDIS_CONNECTION_STRING=redis:6379
-MYSQL_ROOT_PASSWORD=<пароль_root>
-MYSQL_BOTUSER_PASSWORD=<пароль_botuser>
-Запустите проект с помощью Docker Compose:
-bash
-
-Collapse
-
-Wrap
-
-Copy
-docker-compose up --build
-Это соберет и запустит контейнеры для бота, MySQL и Redis. База данных будет автоматически инициализирована через init.sql.
-Логирование: Логи сохраняются в Logs/log.txt и отправляются в указанный Telegram-чат.
-Остановка:
-bash
-
-Collapse
-
-Wrap
-
-Copy
-docker-compose down
+2. **Настройте переменные окружения: Создайте файл .env в корне проекта и добавьте следующие переменные:**
+   ```text
+   TELEGRAM_BOT_TOKEN=<ваш_токен_бота>
+   TELEGRAM_LOG_CHAT_ID=<ID_чата_для_логов>
+   MYSQL_CONNECTION_STRING=Server=db;Database=telegembot;User=botuser;Password=<ваш_пароль>;
+   REDIS_CONNECTION_STRING=redis:6379
+   MYSQL_ROOT_PASSWORD=<пароль_root>
+   MYSQL_BOTUSER_PASSWORD=<пароль_botuser>
+   ```
+3. **Запустите проект с помощью Docker Compose:**
+   ```bash
+   docker-compose up --build
+   ```
+   Это соберет и запустит контейнеры для бота, MySQL и Redis. База данных будет автоматически инициализирована через init.sql.
+4. **Логирование:** Логи сохраняются в Logs/log.txt и отправляются в указанный Telegram-чат.
+5. **Остановка:**
+   ```bash
+   docker-compose down
+   ```
 Тестирование
 Юнит-тесты находятся в отдельном проекте DbServiceTests. Для запуска:
 
