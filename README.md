@@ -55,7 +55,8 @@
 1. **Клонируйте репозиторий:**
    ```bash
    git clone <repository-url>
-   cd <repository-folder>```
+   cd <repository-folder>
+   ```
 Настройте переменные окружения: Создайте файл .env в корне проекта и добавьте следующие переменные:
 text
 
